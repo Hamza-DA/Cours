@@ -3,53 +3,93 @@
   padding: 0;
   box-sizing: border-box;
 }
+@mixin center {
+  display: table;
+  vertical-align: middle;
+}
 
+body {
+  font-family: 'Outfit', sans-serif !important;
+}
 li,
 a {
   text-decoration: none;
   list-style: none;
 }
-nav {
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  height: 60px;
-  background-color: rgb(37, 37, 37);
-  color: #fff !important;
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navLinks {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-}
+// nav {
+//   position: sticky;
+//   top: 0;
+//   width: 100vw;
+//   height: 60px;
+//   background-color: rgb(37, 37, 37);
+//   color: #fff !important;
+//   padding: 0 1rem;
+//   @include center();
+//   justify-content: space-between;
+// }
+// .navLinks {
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 2rem;
+// }
 
 main {
   padding: 1rem;
-  ol {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: auto auto;
-    li {
-      background-color: #fff;
-      border: 1px solid rgb(37, 37, 37);
-      padding: 1rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      h5 {
-        text-transform: uppercase;
+  // ol {
+  //   display: grid;
+  //   gap: 1rem;
+  //   grid-template-columns: auto auto;
+  //   li {
+  //     background-color: #fff;
+  //     border: 1px solid rgb(37, 37, 37);
+  //     padding: 1rem 1rem;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     h5 {
+  //       text-transform: uppercase;
+  //     }
+  //     a {
+  //       padding: 0.5rem;
+  //       background-color: rgb(37, 37, 37);
+  //       display: flex;
+  //       align-items: center;
+  //       svg {
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+table {
+  width: 100%;
+  tr {
+    display: table;
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(37, 37, 37, 0.253);
+    td {
+      &:nth-child(1) {
+        width: 90%;
+        h5 {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 14px;
+          // letter-sp~acing: 0.4px;
+          color: rgba(37, 37, 37);
+        }
       }
+      &:nth-child(2) {
+        text-align: right;
+        text-align: -moz-right;
+      }
+      vertical-align: center;
       a {
-        padding: 0.5rem;
+        width: fit-content;
+        padding: 0.4rem 1rem;
         background-color: rgb(37, 37, 37);
         display: flex;
         align-items: center;
-        svg {
-        }
       }
     }
   }
